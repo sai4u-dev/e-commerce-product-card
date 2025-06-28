@@ -31,5 +31,5 @@ A modern, interactive product card built with **HTML**, **Tailwind CSS** (inline
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/Sai4u-dev/practise.git
-   cd practise
+   git clone https://github.com/Sai4u-dev/E-commerce-Product-Card.git
+   cd E-commerce-Product-Card
