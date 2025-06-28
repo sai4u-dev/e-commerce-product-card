@@ -1,10 +1,85 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Hello World</title>
-	</head>
-	<body>
-		<h1>updates</h1>
-	</body>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Veggie Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="animations.css" />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-pink-100 via-white-500 to-orange-500"
+  >
+    <!-- Cart Counter -->
+    <div class="w-full text-right p-4 text-lg font-bold text-orange-600">
+      🛒 Cart: <span id="cart-count" class="text-black">0</span> item(s)
+    </div>
+
+    <!-- Product Card -->
+    <div class="grid place-items-center px-4 py-6">
+      <div
+        class="relative max-w-sm w-full bg-white/30 backdrop-blur-md border border-white/30 shadow-xl rounded-xl p-6 overflow-hidden animate-fade-in glass-card transition-transform transform hover:scale-105 duration-300 ease-in-out"
+      >
+        <!-- Bubbles Background -->
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <div class="bubbles"></div>
+        </div>
+
+        <!-- Card Content -->
+        <div class="relative z-10">
+          <img
+            src="https://media.istockphoto.com/id/1231559990/photo/orange-fruit-with-drop-shadow-on-white-background-commercial-image-of-citrus-fruits-in.jpg?s=612x612&w=0&k=20&c=zEnUx_53uqE-GBCLar_fK4PwJBG3U2pV0vSu0amRFDE="
+            alt="Fresh Veggies"
+            class="w-full h-48 object-cover rounded-lg mb-4 border border-white shadow"
+          />
+
+          <h2 class="text-xl font-bold text-black mb-2">Orange, 250 g</h2>
+          <p class="text-sm text-gray-800 mb-2">
+            Fresh and organic fruit...
+            <button
+              class="text-orange-600 underline text-sm ml-1 hover:text-orange-800 transition"
+            >
+              More
+            </button>
+          </p>
+
+          <div class="mb-2">
+            <p id="original-price" class="text-gray-500 line-through text-sm">
+              ₹0.00
+            </p>
+            <p class="text-lg font-bold text-orange-600">
+              ₹<span id="discounted-price">0.00</span>
+              <span id="discount-label" class="text-sm text-red-500 ml-2"
+                >0% OFF</span
+              >
+            </p>
+          </div>
+
+          <p class="text-sm text-gray-700 mb-4">
+            In Stock:
+            <span id="inventory" class="font-bold text-black">34</span>
+          </p>
+
+          <!-- Cart Controls -->
+          <div id="cart-controls">
+            <button
+              onclick="addToCart()"
+              class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 rounded-md transition-all duration-200"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Notification Popup -->
+    <div
+      id="popup"
+      class="fixed bottom-6 right-6 bg-orange-500 text-white text-sm font-medium px-4 py-2 rounded-md shadow-lg opacity-0 pointer-events-none transition-opacity duration-500 z-50"
+    >
+      <!-- Message will be injected here -->
+    </div>
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+  </body>
 </html>
