@@ -53,7 +53,7 @@ function decreaseCount() {
   if (cartCount === 0) {
     showPopup("Item removed from cart");
   } else {
-    showPopup("Decreased item quantity");
+    showPopup("Item Removed item quantity");
   }
   updateUI();
 }
