@@ -9,7 +9,7 @@ A modern, interactive product card built with **HTML**, **Tailwind CSS** (inline
 - **Smart cart controls** (Add, +, –)  
 - **Notifications (toasts)** for cart interactions  
 - Fully responsive, lightweight, and easy to integrate  
-
+    
 ---
 
 ## 🛠️ Demo & Features
