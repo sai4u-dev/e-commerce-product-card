@@ -76,5 +76,5 @@ function updateUI() {
           <button onclick="increaseCount()" class="bg-orange-500 text-white px-3 py-1 rounded hover:bg-orange-600">+</button>
         </div>
       `;
-  }
+  } 
 }
